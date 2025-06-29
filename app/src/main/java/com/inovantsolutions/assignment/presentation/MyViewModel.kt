@@ -19,7 +19,7 @@ sealed interface UiSate{
 }
 
 @HiltViewModel
-class ViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
+class MyViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
     private val _uiSate:MutableStateFlow<UiSate> = MutableStateFlow(UiSate.Idea)
     val uiSate = _uiSate.asStateFlow()
     fun getData(){
@@ -33,7 +33,9 @@ class ViewModel @Inject constructor(private val repository: Repository) : ViewMo
         }catch (e:Exception){
             _uiSate.value = UiSate.Error(e.message.toString())
         }
-
+    }
+    init {
+        getData()
     }
     companion object{
         const val TAG =  "MainViewModel"

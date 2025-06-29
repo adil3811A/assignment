@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">assignment</string>
+    <string name="underlined_text"><u>  Learn More</u></string>
+    <string name="or_4_intrest_free_payments">or 4 intrest-free payments</string>
+    <string name="_0_88_kdw">0.88 KDW   </string>
+    <string name="information">Information</string>
+
 </resources>
